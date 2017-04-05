@@ -5,42 +5,12 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ProductService {
-  private _allProducts: Product[] = [
-    {
-      name: "Samsung Galaxy S8",
-      description: "Cool new flagship phone from Samsung",
-      category: ProductCategory.Phones,
-      price: 1000,
-      isAvailable: false
-    },
-    {
-      name: "Samsung Galaxy S7 Edge",
-      description: "Old good flagship phone from Samsung",
-      category: ProductCategory.Phones,
-      price: 700,
-      isAvailable: true
-    },
-    {
-      name: "Apple iPhone 7",
-      description: "Coolest iphone ever",
-      category: ProductCategory.Phones,
-      price: 900,
-      isAvailable: true
-    },
-    {
-      name: "Apple iPad Air 2",
-      description: "Coolest ipad ever",
-      category: ProductCategory.Tablets,
-      price: 500,
-      isAvailable: true
-    },
-    {
-      name: "Microsoft Surface Pro 4",
-      description: "Just an awesome tablet",
-      category: ProductCategory.Tablets,
-      price: 1300,
-      isAvailable: true
-    }  
+  private _allProducts = [
+    new Product("Samsung Galaxy S8", "Cool new flagship phone from Samsung", ProductCategory.Phones, 700, false),
+    new Product("Samsung Galaxy S7 Edge", "Old good flagship phone from Samsung", ProductCategory.Phones, 1000, true),
+    new Product("Apple iPhone 7", "Coolest iphone ever", ProductCategory.Phones, 1000, true),
+    new Product("Apple iPad Air 2", "Coolest ipad ever", ProductCategory.Tablets, 800, true),
+    new Product("Microsoft Surface Pro 4", "Just an awesome tablet", ProductCategory.Tablets, 1200, true)
   ];
 
   getProducts(): Observable<Product[]> {
