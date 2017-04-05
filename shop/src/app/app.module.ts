@@ -1,3 +1,5 @@
+import { MaterialModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BasketService } from './basket-service/basket.service';
 import { ProductService } from './product-service/product.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,7 +20,9 @@ import { BasketComponent } from './basket/basket.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [ProductService, BasketService],
   bootstrap: [AppComponent]
